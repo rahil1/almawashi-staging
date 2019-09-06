@@ -1,7 +1,5 @@
 ---
 deployment:
       tasks:
-        - export DEPLOYPATH=/home/home/rahil1/mrahil_wp/almawashi/almawashi-staging   # Add /<app_folder> if required
-        - /bin cp * $DEPLOYPATH                           #copy all from root 
-        
-        
+        - export DEPLOYPATH=/home/home/rahil1/mrahil_wp/almawashi/almawashi-staging
+        - /bin/cp -r * $DEPLOYPATH
