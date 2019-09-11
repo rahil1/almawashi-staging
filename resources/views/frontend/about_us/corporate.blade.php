@@ -2,7 +2,7 @@
 
 @section('content')
 
-<body class="skin-black fixed about-us " style="background: #000">
+<body class="skin-black  about-us " style="background: #000">
 <!-- <body class="skin-light fixed black-heading about-us" style="background: #eaeaea"> -->
     
     <!-- fixed page-->
