@@ -588,12 +588,23 @@
             var mapheight = $('.map').height();
             // console.log(mapheight);
             $('.listing').height(mapheight - 95);
+
+            var height = $(window).height();
+            console.log(height);
+            if(height <= 768) {
+                $('body').addClass('adjustH');
+            }else{
+                $('body').removeClass('adjustH');
+            }
         }
 
         addheight();
 
         $(window).resize(function(mapheight) {
             addheight();
+            
+
+           
         });
 
         $('#add_item').click(function(e) {
