@@ -48,7 +48,7 @@
 
                     </div>
                     <!-- end righ content -->
-                    <h1 class="page-title">Our Products</h1>
+                    <h1 class="page-title" style="font-size:8em">Our Products</h1>
                 </div>
             </div>
         </div>

@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <!-- end righ content -->
-                    <h1 class="page-title products-title">Our Products</h1>
+                    <h1 class="page-title products-title" style="font-size:8em">Our Products</h1>
                 </div>
             </div>
         </div>

@@ -160,9 +160,9 @@ class PagesController extends Controller
             //Getting visitor ip
             $visitor_ip = geoip()->getLocation($_SERVER['REMOTE_ADDR']);
 
-            $locations_id = Location::where('location_short', $visitor_ip->iso_code)->value('location_id');
+            //$locations_id = Location::where('location_short', $visitor_ip->iso_code)->value('location_id');
 
-            $aboutus_contents = Aboutus::where('fk_section_id', $aboutus_section_id)->where('content_location', $locations_id)->get();   
+            $aboutus_contents = Aboutus::where('fk_section_id', $aboutus_section_id)->where('content_location', 1)->get();   
         }
         else
         {

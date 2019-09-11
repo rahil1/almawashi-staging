@@ -5,6 +5,7 @@
 
 
     <script src="{{ asset('owl/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('owl/jquery.mousewheel.min.js') }}"></script>
     <script>
 
             $('.dynamic').change(function(){
@@ -297,6 +298,26 @@
                 }
             }
         });
+
+        $('.board').owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: false,
+            items: 3,
+            responsive: {
+                320: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                992: {
+                    items: 3
+                }
+            }
+        });
+
+
         $('.shareholders').owlCarousel({
             loop: false,
             margin: 30,
@@ -502,17 +523,18 @@
         });
         var carousel = $(".owl-carousel");
         carousel.owlCarousel({
-
+            
         });
 
-        // carousel.on('mousewheel', '.owl-stage', function(e) {
-        //     if (e.deltaY > 0) {
-        //         carousel.trigger('next.owl');
-        //     } else {
-        //         carousel.trigger('prev.owl');
-        //     }
-        //     e.preventDefault();
-        // });
+        carousel.on('mousewheel', '.owl-stage', function(e) {
+          
+            if (e.deltaY > 0) {
+                carousel.trigger('next.owl');
+            } else {
+                carousel.trigger('prev.owl');
+            }
+            e.preventDefault();
+        });
 
         checkClasses();
         carousel.on('translated.owl.carousel', function(event) {

@@ -35,45 +35,41 @@
                     <div class="col-lg-9 col-12 justify-content-center align-self-center">
                         <div class="row">
                             <div class="col-lg-9 col-md-12 col-sm-12">
-                                <div class="content-area">
-                                    @if(($aboutus_contents->first() != null) AND ($aboutus_contents->get(1) != null))
-                                        <h2 class="lato-black text-uppercase while mb-4">{{ $aboutus_contents->first()->content_heading }} & {{ $aboutus_contents->get(1)->content_heading }}</h2>
-                                    @endif
+                            <div class="content-area">
+                                    <h2 class="lato-black text-uppercase while mb-4">Vision & Mission</h2>
                                     <div class="row">
-                                        @if(($aboutus_contents->first() != null) AND ($aboutus_contents->get(1) != null))
-                                            <!-- quote -->
-                                            <div class="col-lg-6 col-md-6 col-sm-12 mb-3 order-2 order-md-1">
-                                                <div class="content quote pr-lg-5">
-                                                    <p>{!! $aboutus_contents->first()->content_description !!}</p>
-                                                </div>
+                                        <!-- quote -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 mb-3 order-2 order-md-1">
+                                            <div class="content quote pr-lg-5">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                             </div>
-                                            <!-- end quote -->
-                                            <!-- image -->
-                                            <div class="col-lg-6 col-md-6 col-sm-12 mb-3 order-1 order-md-2">
-                                                <div class="quote-image">
-                                                    <img src="{{ url()->assetFrom(config('externalAssets.ext_asset_link'), $aboutus_contents->first()->content_image) }}" class="img-full" />
-                                                </div>
+                                        </div>
+                                        <!-- end quote -->
+                                        <!-- image -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 mb-3 order-1 order-md-2">
+                                            <div class="quote-image">
+                                                <img src="{{ url ('images/mission-vission01.jpg') }}" class="img-full" />
                                             </div>
-                                        @endif
+                                        </div>
                                     </div>
                                     <div class="row">
-                                        @if(($aboutus_contents->get(1) != null) AND ($aboutus_contents->get(1) != null))
-                                            <!-- end image -->
-                                            <!-- image -->
-                                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                                <div class="quote-image">
-                                                    <img src="{{ url()->assetFrom(config('externalAssets.ext_asset_link'), $aboutus_contents->get(1)->content_image) }}" class="img-full" />
-                                                </div>
+                                        <!-- end image -->
+                                        <!-- image -->
+                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                            <div class="quote-image">
+                                                <img src="{{ url ('images/mission-vission02.jpg') }}" class="img-full" />
                                             </div>
-                                            <!-- end image -->
-                                            <!-- quote -->
-                                            <div class="col-lg-8 col-md-8 col-sm-12">
-                                                <div class="content">
-                                                    <p>{!! $aboutus_contents->get(1)->content_description !!}</p>
-                                                </div>
+                                        </div>
+                                        <!-- end image -->
+                                        <!-- quote -->
+                                        <div class="col-lg-8 col-md-8 col-sm-12">
+                                            <div class="content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                             </div>
-                                            <!-- end quote -->
-                                        @endif
+                                        </div>
+                                        <!-- end quote -->
                                     </div>
                                 </div>
                             </div>
