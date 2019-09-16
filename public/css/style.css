@@ -2222,7 +2222,7 @@ ul.ingredients li {
 ul.ingredients li:before {content: "";width: 0;height: 0;border-top: 7px solid transparent;border-left: 7px solid #535353;border-bottom: 7px solid transparent;position: absolute;left: 0;top: 7px;}
 .tab-pane[aria-labelledby="report"] {}
 
-.tab-pane[aria-labelledby="report"] .content-area {
+.tab-pane .content-area {
     width: 100%;
     padding-right: 6%;
 }
@@ -2305,3 +2305,13 @@ li.single-report li {
 }
 
 #main-content .filters .dropdown.show button {border-radius: 13px 13px 0 0;}
+
+
+.county-flags {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 37px;
+}
+
+body .county-flags img {width: 45px !important;display: inline-block !important;margin-right: 6px;}

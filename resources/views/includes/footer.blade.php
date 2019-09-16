@@ -186,7 +186,7 @@
 
             data += ('<img src="{{ config("externalAssets.ext_asset_link") }}/' + productObj.product_image +'">' +
                     '<a href="#" id="close-model" data-dismiss="modal"><i class="fas fa-times"></i></a>' +
-                    '<div class="bottom">' +
+                    '<div class="county-flags"><img src="{{ asset("images/aus.jpg") }}"/><img src="{{ asset("images/uae.jpg") }}"/><img src="{{ asset("images/globall.jpg") }}"/></div><div class="bottom">' +
                         '<h6 class="color-dark font-32 lato-bold">' + productObj.product_name + '</h6>' +
                         '<p class="font-18 color-dark">' + productObj.product_description + '</p>' +
                     '</div>');
@@ -622,7 +622,7 @@
             var clicks = $(this).find('.nav-link');
             $(clicks).click(function(){
                 var data = $(this).attr('aria-controls');
-                if(data == 'report') {
+                if(data == 'report' ||  data == 'shareholders') {
                     $('body').attr('id', 'remove-fixed');
                 }else{
                     $('body').attr('id', '');

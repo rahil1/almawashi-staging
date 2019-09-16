@@ -102,7 +102,13 @@
     .adjustH .office-info li {
         padding: 10px 30px;
     }
-    
+    .adjustH #main-content {
+        position: initial;
+        padding: 0;
+    }
+    .adjustH ul.smart-icons {
+        position: initial;
+    }
     .adjustH h1.page-title {
         position: inherit;
         margin-top: 50px;
