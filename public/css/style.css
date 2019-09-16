@@ -1301,7 +1301,7 @@ h6.sub-heading.gery {
     display: inherit;
     text-decoration: none;
 }
-}
+
 #footer ul li {
     color: #3d3d3d;
 }
@@ -2194,9 +2194,29 @@ a#back {
 }
 /***** /Tabs *****/
 /*Fixed Image sizes*/
-.owl-carousel .owl-item img {
+.owl-carousel .owl-item img,
+ul.recipies-list > li img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+/*Recipes lists*/
+ul.recipies-list > li {
+    background: #fff;
+    margin-bottom: 40px;
+}
+
+ul.recipies-list li .single-recipe {padding: 20px 0;height: 100%;}
+
+ul.recipies-list li .single-recipe:before {
+    left: -30px;
+}
+ul.ingredients li {
+    display: inline-block;
+    width: 24%;
+    padding: 4px 0 5px 15px;
+    position: relative;
+}
+
+ul.ingredients li:before {content: "";width: 0;height: 0;border-top: 7px solid transparent;border-left: 7px solid #535353;border-bottom: 7px solid transparent;position: absolute;left: 0;top: 7px;}

@@ -2,9 +2,9 @@
 
 @section('content')
 
-<body class="skin-light fixed" style="background: #eaeaea">
+<body class="skin-light" style="background: #eaeaea">
     <!-- fixed page-->
-    <section class=" light full-height transparent" s>
+    <section class=" light transparent" s>
         <!-- menu header-->
         @include('includes.top-nav')
         <!-- menu header-->
@@ -17,66 +17,76 @@
                         <div class="ul-dropdown">
                             <div class="selected">Recipies</div>
                             <ul class="side-nav style-2 p-0">
-                                @foreach ($nav_links as $nav_link) 
-                                    <li class="{{ (url()->current() == url($nav_link->section_path)) ? 'active' : '' }}">
-                                        <a href="{{ url($nav_link->section_path) }}">{{ str_replace('_', ' ',$nav_link->section_name) }}</a>
-                                    </li>
+                                @foreach ($nav_links as $nav_link)
+                                <li class="{{ (url()->current() == url($nav_link->section_path)) ? 'active' : '' }}">
+                                    <a href="{{ url($nav_link->section_path) }}">{{ str_replace('_', ' ',$nav_link->section_name) }}</a>
+                                </li>
                                 @endforeach
                             </ul>
                         </div>
                         <ul class="smart-icons text-left style-2 p-0">
                             @include('includes.actionbar-links')
-                            
+
                         </ul>
                     </div>
                     <!-- end left links -->
                     <!-- right content -->
                     <div class="col-lg-9 col-12 ">
                         <div class="content-area">
-                            <!-- Recepies slider -->
-                            <div class="owl-carousel owl-theme scroll recipies">
-                                @for($i=0; $i<$products->count(); $i++)
-                                    <div class="item">
-                                        <div class="inner">
-                                            <!-- <a href="#product-box" data-toggle="modal" data-post="{{ $products[$i] }}"> -->
-                                                <img width="64" height="280" src="{{ $products[$i]->recipe_image != null ? url()->assetFrom(config('externalAssets.ext_asset_link'), $products[$i]->recipe_image) : ($products[$i]->recipe_video != null ? json_decode($products[$i]->recipe_video)->image : '') }}" />
-                                                <h6 class="text-left">{{ $products[$i]->recipe_title }}</h6>
-                                                <!-- <i class="flaticon-zoom-in"></i> -->
-                                            <!-- </a> -->
+                            <!-- Recepies -->
+                            <h2 class="lato-black text-uppercase color-dark">Our Recipes</h2>
+                            <ul class="recipies-list mt-5">
+                                <!-- item -->
+                                @for ($i = 0; $i < 5; $i++) <li>
+                                    <div class="row">
+                                        <!-- recp image -->
+                                        <div class="col-md-4">
+                                            <a href="#product-box" data-toggle="modal">
+                                                <img src="{{ asset('images/video.jpg') }}" class="img-full" />
+                                            </a>
                                         </div>
-                                        @if ($i+1 < $products->count())
-                                            <div class="inner">
-                                                <!-- <a href="#product-box" data-toggle="modal" data-post="{{ $products[$i+1] }}"> -->
-                                                    <img width="64" height="280" src="{{ $products[$i+1]->recipe_image != null ? url()->assetFrom(config('externalAssets.ext_asset_link'), $products[$i+1]->recipe_image) : ($products[$i+1]->recipe_video != null ? json_decode($products[$i+1]->recipe_video)->image : '') }}" />
-
-                                                    <h6 class="text-left">{{ $products[$i+1]->recipe_title }}</h6>
-                                                    <!-- <i class="flaticon-zoom-in"></i> -->
-                                                <!-- </a> -->
+                                        <div class="col-md-8">
+                                            <div class="icon single-recipe">
+                                                <h3 class="lato font-22 color-theme mb-2">How To Make Roasted Beef Like a Pro</h3>
+                                                <h3 class="lato-black font-16 color-dark mb-2 text-uppercase">Cooking Instructions:</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tempor incididunt ut labore et dolore magna aliqua. Quis nostrud exercitation commodo consequat.</p>
+                                                <h3 class="lato-black font-16 color-dark mb-2 text-uppercase">Ingredients:</h3>
+                                                <ul class="ingredients">
+                                                    <li>Beef 1kg</li>
+                                                    <li>Beef 1kg</li>
+                                                    <li>Beef 1kg</li>
+                                                    <li>Beef 1kg</li>
+                                                    <li>Yoghurt 500gms</li>
+                                                    <li>Yoghurt 500gms</li>
+                                                    <li>Yoghurt 500gms</li>
+                                                    <li>Yoghurt 500gms</li>
+                                                </ul>
                                             </div>
-                                            @php $i++; @endphp
-                                        @endif
+                                        </div>
                                     </div>
-                                @endfor
-                            </div>
-                            <!-- END Recepies slider -->
-                            <div class="owl-carousel owl-theme scroll recipies-mobile">
-                                <div class="item">
-                                    @foreach($products as $product)   
-                                        <!-- <a href="#product-box" data-toggle="modal" data-post="{{ $product }}"> -->
-                                            <img width="64" height="280" src="{{ $product->recipe_image != null ? url()->assetFrom(config('externalAssets.ext_asset_link'), $product->recipe_image) : ($product->recipe_video != null ? json_decode($product->recipe_video)->image : '') }}" />
-                                            <h6 class="text-left">{{ $product->recipe_title }}</h6>
-                                            <!-- <i class="flaticon-zoom-in"></i> -->
-                                        <!-- </a> -->
-                                    @endforeach
-                                </div>
-                            </div>
+                                    </li>
+                                    <!-- item -->
 
-
+                                    @endfor
+                            </ul>
+                            <!-- END Recepies -->
                         </div>
-
+                        <!-- pagination -->
+                        <div class="row mt-3">
+                            <div class="col-sm-12 pr-lg-4 pl-lg-4">
+                                <ul class="pagination">
+                                    <li><a class="active" href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- enf pagination -->
                     </div>
                     <!-- end righ content -->
-                    <h1 class="page-title products-title" style="font-size:8em" >Our Products</h1>
+                    <!-- <h1 class="page-title products-title" style="font-size:8em" >Our Products</h1> -->
                 </div>
             </div>
         </div>
@@ -94,6 +104,5 @@
             </div>
         </div>
     </div> -->
-    @include('includes.footer-data')
     @endsection
-    @section('title','Al Mawashi - RECIPES') 
+    @section('title','Al Mawashi - RECIPES')
