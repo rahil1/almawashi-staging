@@ -616,5 +616,18 @@
 
             // $('.entry-div').append();
         })
+
+        $('.nav-tabs li').each(function(){
+            console.log(this);
+            var clicks = $(this).find('.nav-link');
+            $(clicks).click(function(){
+                var data = $(this).attr('aria-controls');
+                if(data == 'report') {
+                    $('body').attr('id', 'remove-fixed');
+                }else{
+                    $('body').attr('id', '');
+                }
+            });
+        });
     </script>
     

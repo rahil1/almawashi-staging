@@ -112,6 +112,9 @@
     .owl-carousel .owl-item img {
 
     }
+    #remove-fixed ul.smart-icons.text-left.style-2.p-0 {
+        position: static;
+    }
 }
 @media (max-width: 991px) { 
     .container-fluid {

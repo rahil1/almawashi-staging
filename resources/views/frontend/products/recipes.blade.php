@@ -37,7 +37,8 @@
                             <h2 class="lato-black text-uppercase color-dark">Our Recipes</h2>
                             <ul class="recipies-list mt-5">
                                 <!-- item -->
-                                @for ($i = 0; $i < 5; $i++) <li>
+                                @for ($i = 0; $i < 5; $i++) 
+                                <li>
                                     <div class="row">
                                         <!-- recp image -->
                                         <div class="col-md-4">

@@ -1516,7 +1516,7 @@ ul.contact li i {
 .skin-light ul.side-nav li a {
     color: #383838;
 }
-#main-content .tabs.almawashi ul li a {
+#main-content .tabs.almawashi ul li a.nav-link{
     text-decoration: none;
     background: none;
     font-size: 18px;
@@ -2220,3 +2220,88 @@ ul.ingredients li {
 }
 
 ul.ingredients li:before {content: "";width: 0;height: 0;border-top: 7px solid transparent;border-left: 7px solid #535353;border-bottom: 7px solid transparent;position: absolute;left: 0;top: 7px;}
+.tab-pane[aria-labelledby="report"] {}
+
+.tab-pane[aria-labelledby="report"] .content-area {
+    width: 100%;
+    padding-right: 6%;
+}
+
+ul.report li.single-report .report {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+li.single-report li {
+    padding: 0;
+}
+#remove-fixed #main-content {
+    position: static;
+    padding: 0;
+}
+
+#remove-fixed .full-height {
+    height: auto;
+}
+.filters {
+    float: right;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 6%;
+    top: -55px;
+}
+
+.filters span {
+    float: left;
+    margin-right: 15px;
+    font-family: 'Lato-Bold';
+    font-size: 14px;
+}
+
+.filters .dropdown {
+    float: right;
+}
+
+.filters .dropdown button {
+    padding: 0;
+}
+
+#main-content .filters button {
+    padding: 3px 15px;
+    border: none !important;
+    background: #868686 !important;
+    color: #fff;
+    border-radius: 13px;
+}
+
+#main-content .filters button:after {
+    opacity: 0;
+}
+
+#main-content .filters button:before {
+    right: 15px;
+}
+#main-content .filters .dropdown-menu.show {
+    padding: 0;
+    max-width: 81px;
+    min-width: 81px;
+    padding: 0px 0 5px;
+}
+
+#main-content .filters .dropdown-menu a {
+    padding: 0px 18px;
+    /* text-align: right; */
+    color: #fff;
+    background: none;
+    text-decoration: none;
+}
+
+#main-content .filters .dropdown-menu {
+    background: #868686;
+    border-radius: 0px 0 8px 8px;
+}
+
+#main-content .filters .dropdown.show button {border-radius: 13px 13px 0 0;}
