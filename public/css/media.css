@@ -105,6 +105,7 @@
     .adjustH #main-content {
         position: initial;
         padding: 0;
+        height: auto;
     }
     .adjustH ul.smart-icons {
         position: initial;
