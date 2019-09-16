@@ -104,7 +104,8 @@
     }
     
     .adjustH h1.page-title {
-        font-size: 5em;
+        position: inherit;
+        margin-top: 50px;
     }
     .adjustH #tab-three .form-group {
         margin-bottom: 8px;
@@ -114,6 +115,14 @@
     }
     #remove-fixed ul.smart-icons.text-left.style-2.p-0 {
         position: static;
+    }
+    .adjustH .full-height {
+        height: auto;
+    }
+    
+    .adjustH .page-boxes {
+        position: inherit;
+        margin-top: 70px;
     }
 }
 @media (max-width: 991px) { 
