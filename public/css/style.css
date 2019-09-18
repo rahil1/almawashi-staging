@@ -2055,6 +2055,7 @@ a#close-model {
     right: 10px;
     display: table;
     text-align: center;
+    z-index: 10;
 }
 .modal-dialog .modal-content .modal-body {
     padding: 0;
@@ -2156,6 +2157,12 @@ a#back {
 }
 .clients .client {
     margin-bottom: 20px;
+}
+.clients .client img {
+    min-height: 100% !important;
+    max-height: 99% !important;
+    width: 70%;
+    margin: 0 auto;
 }
 .modal-dialog[role="video"] iframe {
     display: block;
@@ -2309,9 +2316,16 @@ li.single-report li {
 
 .county-flags {
     position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 20px 37px;
+    bottom: 40px;
+    right: 0;
+    padding: 20px 10px;
 }
 
 body .county-flags img {width: 45px !important;display: inline-block !important;margin-right: 6px;}
+
+#tab-shareholders img {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}

@@ -618,11 +618,12 @@
         })
 
         $('.nav-tabs li').each(function(){
-            console.log(this);
+            
             var clicks = $(this).find('.nav-link');
             $(clicks).click(function(){
+                console.log(this);
                 var data = $(this).attr('aria-controls');
-                if(data == 'report' ||  data == 'shareholders') {
+                if(data == 'profile' ||  data == 'shareholders') {
                     $('body').attr('id', 'remove-fixed');
                 }else{
                     $('body').attr('id', '');

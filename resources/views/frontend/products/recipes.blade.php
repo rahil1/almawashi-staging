@@ -42,7 +42,7 @@
                                     <div class="row">
                                         <!-- recp image -->
                                         <div class="col-md-4">
-                                            <a href="#product-box" data-toggle="modal">
+                                        <a href="#product-box" data-toggle="modal">
                                                 <img src="{{ asset('images/video.jpg') }}" class="img-full" />
                                             </a>
                                         </div>
@@ -96,14 +96,14 @@
     </section>
     <!-- end fixed page-->
     <!-- gallery box -->
-    <!-- <div class="modal fade" id="product-box" tabindex="-1" role="dialog" aria-labelledby="product-box" aria-hidden="true">
+    <div class="modal fade" id="product-box" tabindex="-1" role="dialog" aria-labelledby="product-box" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="galery">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div id="product-data"></div>
+                    <div id="product-data">Here is video popup</div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     @endsection
     @section('title','Al Mawashi - RECIPES')

@@ -21,17 +21,16 @@
                         <div class="ul-dropdown">
                             <div class="selected">Shareholders</div>
                             <ul class="side-nav style-dropdown p-0">
-                                @foreach ($nav_links as $nav_link) 
-                                    <li>
-                                        <a href="{{ url($nav_link->section_path) }}">{{ str_replace('_', ' ',$nav_link->section_name)}}</a>
-                                    </li>
+                                @foreach ($nav_links as $nav_link)
+                                <li>
+                                    <a href="{{ url($nav_link->section_path) }}">{{ str_replace('_', ' ',$nav_link->section_name)}}</a>
+                                </li>
                                 @endforeach
                             </ul>
 
                         </div>
                         <ul class="smart-icons text-left style-2 p-0">
                             @include('includes.actionbar-links')
-                            
                         </ul>
                     </div>
                     <!-- end left links -->
@@ -77,17 +76,48 @@
                                             <h5>Corporate Social responsibility</h5>
                                             <p>Al Mawashi Have been & always a contributor to the social scene. We participated in many projects that contribute to people life like Eid Al Adha sacrifice slaughter services through our App & helping Charity organization by providing sacrifices with a lower cost. participating in KidZania to show the kids our daily operation & letting them learn about livestock farming & shipping.</p>
 
+                                            <img src="{{ asset('images/stackehlders2.jpg') }}" class="" />
                                         </div>
                                     </div>
-                                    
+
                                     @include('frontend.stakeholders.reports')
 
                                     <div class="tab-pane fade" id="tab-two" role="tabpanel" aria-labelledby="Disclosure">
                                         <div class="content-area ">
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-                                            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            <!-- reports -->
+                                            <div class="content-area">
+                                                <div class="filters">
+                                                    <span>Select the year:</span>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2019</button>
+                                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                                            <a class="dropdown-item" href="#">2020</a>
+                                                            <a class="dropdown-item" href="#">2021</a>
+                                                            <a class="dropdown-item" href="#">2023</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <ul class="report">
+                                                    @for ($i = 0; $i < 10; $i++) <!-- item -->
+                                                        <li class="single-report">
+                                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                                <div class="icon">
+                                                                    <div class="report">
+                                                                        <h3 class="lato-bold font-16 color-dark mb-2">Al Mawashi reported a profit of KD 3.5 million for the 9 months ended 30-09-20</h3>
+                                                                        <p>Date: September 30, 2015</p>
+                                                                        <ul class="btsn">
+                                                                            <li><a href="#pdf" class="btn default">Download Report</a></li>
+                                                                        </ul>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <!-- item -->
+                                                        @endfor
+                                                </ul>
+                                            </div>
+                                            <!-- reports -->
                                         </div>
                                     </div>
                                     <!-- <div class="tab-pane fade" id="tab-three" role="tabpanel" aria-labelledby="stock-value">

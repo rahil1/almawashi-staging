@@ -2,9 +2,9 @@
 
 @section('content')
 
-<body class="skin-black fixed about-us " style="background: #282828">
+<body class="skin-black about-us " style="background: #282828">
     <!-- fixed page-->
-    <section class=" dark full-height dark transparent" style="">
+    <section class="dark transparent" style="">
         <!-- <div class="owl-carousel owl-theme" id="bgslider">
             <div class="item" style="background:url({{ url('assests/images/home-slid1.jpg') }}) ">
             </div>
@@ -15,7 +15,7 @@
         @include('includes.top-nav')
         <!-- menu header-->
         <!--main content-->
-        <div id="main-content" class="" style="">
+        <div id="main-content" class="" style="height: auto;">
             <div class="container-fluid h-100">
                 <!-- row top -->
                 <div class="row h-100">
@@ -53,7 +53,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row mb-5">
                                         <!-- end image -->
                                         <!-- image -->
                                         <div class="col-lg-4 col-md-4 col-sm-12">
@@ -70,6 +70,26 @@
                                             </div>
                                         </div>
                                         <!-- end quote -->
+                                    </div>
+                                    <div class="row mb-5">
+                                        <div class="col-12">
+                                            <h2 class="lato-black text-uppercase while mb-5">Values</h2>
+                                        </div>
+                                        <!-- quote -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 mb-3 order-2 order-md-1">
+                                            <div class="content quote pr-lg-5">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        </div>
+                                        <!-- end quote -->
+                                        <!-- image -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 mb-3 order-1 order-md-2">
+                                            <div class="quote-image">
+                                                <img src="{{ url ('images/mission-vission01.jpg') }}" class="img-full" />
+                                            </div>
+                                        </div>
+                                         <!-- end image -->
                                     </div>
                                 </div>
                             </div>
@@ -89,6 +109,6 @@
         <!--end main content-->
     </section>
     <!-- end fixed page-->
-    @include('includes.footer-data')
+  <?php /*  @include('includes.footer-data') */ ?>
     @endsection
     @section('title','Almawashi | About Us | Mission & Vision') 
