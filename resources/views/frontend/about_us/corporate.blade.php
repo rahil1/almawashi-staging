@@ -6,7 +6,7 @@
 <!-- <body class="skin-light fixed black-heading about-us" style="background: #eaeaea"> -->
     
     <!-- fixed page-->
-    <section class=" dark full-height dark transparent" style="">
+    <section class=" dark  dark transparent" style="">
         <!-- <div class="owl-carousel owl-theme" id="bgslider">
             <div class="item" style="background:url({{ url('assests/images/home-slid1.jpg') }}) ">
             </div>
@@ -17,7 +17,7 @@
         @include('includes.top-nav')
         <!-- menu header-->
         <!--main content-->
-        <div id="main-content" class="" style="">
+        <div id="main-content" class="" style="    height: auto;">
             <div class="container-fluid h-100">
                 <!-- row top -->
                 <div class="row h-100">

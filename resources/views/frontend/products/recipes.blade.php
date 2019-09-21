@@ -42,7 +42,7 @@
                                     <div class="row">
                                         <!-- recp image -->
                                         <div class="col-md-4">
-                                        <a href="#product-box" data-toggle="modal">
+                                        <a href="#product-box2" data-toggle="modal">
                                                 <img src="{{ asset('images/video.jpg') }}" class="img-full" />
                                             </a>
                                         </div>
@@ -96,11 +96,13 @@
     </section>
     <!-- end fixed page-->
     <!-- gallery box -->
-    <div class="modal fade" id="product-box" tabindex="-1" role="dialog" aria-labelledby="product-box" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="galery">
+    <div class="modal fade" id="product-box2" tabindex="-1" role="dialog" aria-labelledby="product-box" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="video">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div id="product-data">Here is video popup</div>
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ZMeS0ponHQ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a href="#" id="close-model" data-dismiss="modal"><i class="fas fa-times"></i></a>
+                    <a href="#" id="close-model" data-dismiss="modal"><i class="fas fa-times"></i></a>
                 </div>
             </div>
         </div>
